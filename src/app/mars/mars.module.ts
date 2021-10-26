@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { MarsComponent } from './mars.component';
@@ -10,7 +8,7 @@ import { PhotoDataService } from '../rober-photos.service';
 import { DataViewModule } from 'primeng/dataview';
 
 @NgModule({
-  imports: [FormsModule, HttpClientModule, ReactiveFormsModule, DataViewModule],
+  imports: [HttpClientModule, DataViewModule],
   declarations: [MarsComponent],
   providers: [HttpClient, PhotoDataService],
 })
