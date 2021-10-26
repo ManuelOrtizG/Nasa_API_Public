@@ -1,0 +1,18 @@
+<div *ngIf="data">
+  <h2>{{ data.title }}</h2>
+  <span>{{ data.date }}</span>
+  <div class="media">
+    <iframe
+      *ngIf="data.media_type === 'video'"
+      [src]="data.url"
+      frameborder="0"
+      width="640"
+      height="360"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen
+    ></iframe>
+    <img *ngIf="data.media_type === 'image'" [src]="data.url" />
+  </div>
+  <p>{{ data.explanation }}</p>
+</div>
