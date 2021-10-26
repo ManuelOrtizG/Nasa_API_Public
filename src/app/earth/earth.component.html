@@ -1,10 +1,10 @@
-<form *ngIf="formGroup" [fromGroup]="formGroup">
-  <label> for="lon">lon</label>
+<form *ngIf="formGroup" [formGroup]="formGroup">
+  <label for="lon">lon</label>
   <br />
   <input id="lon" name="lon" type="number" formControlName="lon" />
   <br />
   <br />
-  <label> for="lat">lat</label><br />
+  <label for="lat">lat</label><br />
   <input id="lat" name="lat" type="number" formControlName="lat" />
   <br />
 </form>

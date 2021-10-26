@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing-module';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { TodayDataService } from './today-data.service';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SafePipe } from './safe.pipe';
+import { EarthDataService } from './earth-data.service';
 
 @NgModule({
   imports: [
@@ -30,8 +32,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     NotFoundComponent,
     TopBarComponent,
+    SafePipe,
   ],
   bootstrap: [AppComponent],
-  providers: [HttpClient, TodayDataService],
+  providers: [HttpClient, TodayDataService, EarthDataService],
 })
 export class AppModule {}
