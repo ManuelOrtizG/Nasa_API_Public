@@ -37,9 +37,9 @@ export class EarthComponent implements OnInit {
     this.earthDataService.getImageLocalized(lon, lat).subscribe(
       (res) => {
         console.log('res', res);
-        const objURL = window.URL.createObjectURL(res);
-        console.log('ObjURL', objURL);
-        this.imageUrl = objURL;
+        //const objURL = window.URL.createObjectURL(res);
+        //console.log('ObjURL', objURL);
+        this.imageUrl = res.url;
       },
       (err) => {
         this.messageService.add({
