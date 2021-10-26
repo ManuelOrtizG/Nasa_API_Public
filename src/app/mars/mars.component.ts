@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
-import { PhotoDatas } from '../interfaces';
+import { PhotoData, PhotoDatas } from '../interfaces';
 import { PhotoDataService } from '../rober-photos.service';
 
 @Component({
@@ -17,13 +17,15 @@ export class MarsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    //this.getImage();
+    this.getImage();
   }
   getImage() {
     this.photoDataService.getPhotosData().subscribe(
-      (res) => {
-        this.photos = res;
+      (res: any) => {
+        this.photos = res.photos;
         console.log('res', res);
+        console.log('photod', this.photos);
+        console.log('res', res.photos);
       },
       (err) => {
         this.messageService.add({

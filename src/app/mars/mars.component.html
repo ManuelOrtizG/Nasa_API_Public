@@ -1,7 +1,8 @@
 <p-dataView [value]="photos">
-  <ng-template let-car pTemplate="listItem">
+  <ng-template let-photo pTemplate="listItem">
+    <img [src]="photo.img_src" alt="" />
     <div>
-      {{ photos }}
+      {{ photo.id }}
     </div>
   </ng-template>
 </p-dataView>
