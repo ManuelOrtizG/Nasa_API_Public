@@ -7,7 +7,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'mars', component: MarsComponent },
+  {
+    path: 'mars',
+    loadChildren: () => import('./mars/mars.module').then((m) => m.MarsModule),
+  },
   { path: 'earth', component: EarthComponent },
   { path: '**', component: NotFoundComponent },
 ];

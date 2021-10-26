@@ -7,7 +7,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { MarsComponent } from './mars/mars.component';
 import { EarthComponent } from './earth/earth.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing-module';
@@ -16,11 +15,9 @@ import { TodayDataService } from './today-data.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SafePipe } from './safe.pipe';
 import { EarthDataService } from './earth-data.service';
-import { PhotoDataService } from './rober-photos.service';
 
 //primeng
 import { ToastModule } from 'primeng/toast';
-import { DataViewModule } from 'primeng/dataview';
 
 @NgModule({
   imports: [
@@ -31,12 +28,10 @@ import { DataViewModule } from 'primeng/dataview';
     HttpClientModule,
     ReactiveFormsModule,
     ToastModule,
-    DataViewModule,
   ],
   declarations: [
     AppComponent,
     HelloComponent,
-    MarsComponent,
     EarthComponent,
     HomeComponent,
     NotFoundComponent,
@@ -44,6 +39,6 @@ import { DataViewModule } from 'primeng/dataview';
     SafePipe,
   ],
   bootstrap: [AppComponent],
-  providers: [HttpClient, TodayDataService, EarthDataService, PhotoDataService],
+  providers: [HttpClient, TodayDataService, EarthDataService],
 })
 export class AppModule {}
