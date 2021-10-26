@@ -10,7 +10,7 @@ export class TodayDataService {
 
   getTodayData(): Observable<TodayData> {
     return this.http.get<TodayData>(
-      `${environment.API_NASA_URL}/apod?api_key=${environment.API_NASA_KEY}`
+      `${environment.API_NASA_URL}planetary/apod?api_key=${environment.API_NASA_KEY}`
     );
   }
 }

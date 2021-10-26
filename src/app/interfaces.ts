@@ -10,25 +10,27 @@ export interface TodayData {
 }
 
 interface Rover {
-  id: string;
-  name: string;
-  landindg_date: string;
-  launch_date: string;
-  status: string;
+  id: Number;
+  name: String;
+  landindg_date: String;
+  launch_date: String;
+  status: String;
 }
 
 interface Camera {
   id: String;
   name: String;
-  rover_id: String;
+  rover_id: Number;
   full_name: String;
-},
+}
 
 export interface PhotoData {
- id: String;
- sol: String;
- camera: Camera;
- img_src: String;
- earth_date: String;
- rover: Rover;
+  id: Number;
+  sol: String;
+  camera: Camera;
+  img_src: String;
+  earth_date: String;
+  rover: Rover;
 }
+
+export type PhotoDatas = Array<PhotoData>;

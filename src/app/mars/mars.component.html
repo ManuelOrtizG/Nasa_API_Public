@@ -1,3 +1,7 @@
-<p>
-mars works!
-</p>
+<p-dataView [value]="photos">
+  <ng-template let-car pTemplate="listItem">
+    <div>
+      {{ photos }}
+    </div>
+  </ng-template>
+</p-dataView>

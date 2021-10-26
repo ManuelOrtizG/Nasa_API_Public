@@ -16,9 +16,11 @@ import { TodayDataService } from './today-data.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SafePipe } from './safe.pipe';
 import { EarthDataService } from './earth-data.service';
+import { PhotoDataService } from './rober-photos.service';
 
 //primeng
 import { ToastModule } from 'primeng/toast';
+import { DataViewModule } from 'primeng/dataview';
 
 @NgModule({
   imports: [
@@ -29,6 +31,7 @@ import { ToastModule } from 'primeng/toast';
     HttpClientModule,
     ReactiveFormsModule,
     ToastModule,
+    DataViewModule,
   ],
   declarations: [
     AppComponent,
@@ -41,6 +44,6 @@ import { ToastModule } from 'primeng/toast';
     SafePipe,
   ],
   bootstrap: [AppComponent],
-  providers: [HttpClient, TodayDataService, EarthDataService],
+  providers: [HttpClient, TodayDataService, EarthDataService, PhotoDataService],
 })
 export class AppModule {}
