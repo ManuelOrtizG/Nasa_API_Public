@@ -17,7 +17,7 @@ export class EarthDataService {
     // };
 
     return this.http.get<any>(
-      `${environment.API_NASA_URL}/earth/imagery?lon=${lon}&lat=${lat}&date=2018-01-01&dim=0.15&api_key=${environment.API_NASA_KEY}`
+      `${environment.API_NASA_URL}/earth/imagery?lon=${lon}&lat=${lat}&date=2018-01-01&dim=0.15&api_key=${environment.API_NASA_KEYPUBLIC}`
       // HTTPOptionsForText
     );
   }
